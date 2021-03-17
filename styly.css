@@ -1,8 +1,18 @@
+body {
+  background-image: linear-gradient(#615dad, #ffc8da);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
 main {
   color: #ffffff;
   text-align: center;
   background-color: #283e50;
-  width: 500px;
+  width: 450px;
+  margin: 80px auto;
+  font-size: 1.2rem;
+  font-family: 'Arial', sans-serif;
 }
 
 .obrazek {
@@ -10,25 +20,48 @@ main {
 }
 h1 {
   font-family: 'Lobster', cursive;
-  font-size: 3.5rem;
+  font-weight: 400;
+  font-size: 3.5em;
 }
 
-.kontejner {
-  display: flex;
+p {
+  padding: 1rem;
 }
-.pravidla {
+
+a {
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.tlacitko1,
+.tlacitko2 {
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.tlacitko1 {
   background-color: #1fcca4;
 }
 
-.pravidla:hover {
+.tlacitko1:hover {
   background-color: #1cbb96;
 }
 
-.zacit {
+.tlacitko2 {
   background-color: #0197f6;
 }
 
-.zacit:hover {
+.tlacitko2:hover {
   background-color: #0090e9;
 }
 
