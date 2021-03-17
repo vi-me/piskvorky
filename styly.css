@@ -1,6 +1,35 @@
-body {
+main {
+  color: #ffffff;
+  text-align: center;
+  background-color: #283e50;
+  width: 500px;
 }
 
+.obrazek {
+  width: 100%;
+}
 h1 {
   font-family: 'Lobster', cursive;
+  font-size: 3.5rem;
 }
+
+.kontejner {
+  display: flex;
+}
+.pravidla {
+  background-color: #1fcca4;
+}
+
+.pravidla:hover {
+  background-color: #1cbb96;
+}
+
+.zacit {
+  background-color: #0197f6;
+}
+
+.zacit:hover {
+  background-color: #0090e9;
+}
+
+/* Gradient v pozadí jde z fialové  #615dad do růžové  #ffc8da. */
