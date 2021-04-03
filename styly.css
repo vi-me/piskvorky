@@ -16,12 +16,12 @@ main {
   font-family: 'Arial', sans-serif;
 }
 
-.obrazek {
+.main-image {
   width: 100%;
 }
 
 main,
-.obrazek {
+.main-image {
   border-radius: 0.5rem 0.5rem 0 0;
 }
 
@@ -42,37 +42,27 @@ a {
   color: #ffffff;
 }
 
-.tlacitko1,
-.tlacitko2 {
+.button {
   height: 4rem;
   width: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* //tento kus kódu je zbytečný// */
-/* a {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-} */
-
-.tlacitko1 {
+.button-one {
   background-color: #1fcca4;
   margin-bottom: 2px;
 }
 
-.tlacitko1:hover {
+.button-one:hover {
   background-color: #1cbb96;
 }
 
-.tlacitko2 {
+.button-two {
   background-color: #0197f6;
 }
 
-.tlacitko2:hover {
+.button-two:hover {
   background-color: #0090e9;
 }
