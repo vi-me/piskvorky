@@ -37,7 +37,7 @@ p {
   padding: 1rem;
 }
 
-/* BUTTON STYLES*/
+/* -------------------BUTTON STYLES-------------------*/
 .container__buttons a {
   text-decoration: none;
   font-size: 1.2rem;
@@ -69,7 +69,7 @@ p {
   background-color: #0090e9;
 }
 
-/* RULES PAGE STYLING*/
+/* -------------------RULES PAGE STYLING------------------- */
 .heading-rules {
   padding-top: 80px;
 }
@@ -112,10 +112,16 @@ figcaption {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin-bottom: 2rem;
   }
 
   figure {
     width: 40%;
     margin: 0;
+    padding: 1rem 0;
+  }
+
+  figcaption {
+    font-size: 1rem;
   }
 }
