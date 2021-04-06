@@ -3,13 +3,18 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100%;
+  min-width: 350px;
+}
+
+body {
+  margin: 0;
 }
 
 main {
   color: #ffffff;
   text-align: center;
   background-color: #283e50;
-  width: 450px;
+  width: 350px;
   margin: 80px auto;
   font-size: 1.1rem;
   line-height: 1.9rem;
@@ -104,8 +109,12 @@ figcaption {
 }
 
 @media (min-width: 640px) {
+  html {
+    min-width: 640px;
+  }
+
   .rules-page__main {
-    width: 800px;
+    width: 640px;
   }
 
   .container__situations {
