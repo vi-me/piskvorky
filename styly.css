@@ -7,6 +7,10 @@ body {
 main {
   color: #ffffff;
   text-align: center;
+}
+
+.main-page__main,
+.rules-page__main {
   background-color: #283e50;
   width: 450px;
   margin: 80px auto;
@@ -15,12 +19,13 @@ main {
   font-family: 'Arial', sans-serif;
 }
 
-.main-image {
+.main-page__image {
   width: 100%;
 }
 
-main,
-.main-image {
+.main-page__main,
+.rules-page__main,
+.main-page__image {
   border-radius: 0.5rem 0.5rem 0 0;
 }
 
@@ -127,4 +132,29 @@ figcaption {
   figcaption {
     font-size: 1rem;
   }
+}
+
+/* -------------------GAME PAGE STYLING------------------- */
+.game-page__main {
+  max-width: 80vmin;
+  margin: auto;
+}
+
+.playing-board {
+  width: 80vmin;
+  height: 80vmin;
+  display: flex;
+  flex-wrap: wrap;
+  border: solid 1px black;
+}
+
+.cell {
+  height: 10%;
+  width: 10%;
+  background-color: #c4b6d8;
+  border: solid 1px black;
+}
+
+.cell:hover {
+  background-color: #d4c1dc;
 }
