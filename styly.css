@@ -7,6 +7,9 @@ body {
 main {
   color: #ffffff;
   text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.9rem;
+  font-family: 'Arial', sans-serif;
 }
 
 .main-page__main,
@@ -14,9 +17,6 @@ main {
   background-color: #283e50;
   width: 450px;
   margin: 80px auto;
-  font-size: 1.1rem;
-  line-height: 1.9rem;
-  font-family: 'Arial', sans-serif;
 }
 
 .main-page__image {
@@ -140,6 +140,69 @@ figcaption {
   margin: auto;
 }
 
+/* ------GAME PAGE STYLING - HEADER ------- */
+
+.game-page__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* ---GAME PAGE STYLING - HEADER - left------- */
+
+.game-page__header-left {
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.game-page__player-text {
+  padding: 0;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.game-page__player-icon {
+  filter: invert(100%);
+  width: 1.1em;
+  height: 1.1em;
+}
+
+/* ---GAME PAGE STYLING - HEADER - right------- */
+
+.game-page__header-right a {
+  text-decoration: none;
+}
+
+.game-page__header-right img {
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #615dad;
+  width: 20px;
+}
+
+.game-page__home-button img {
+  background-color: #1fcca4;
+  margin-right: 6px;
+}
+
+.game-page__restart-button img {
+  background-color: #0090e9;
+}
+
+.game-page__home-button img:hover {
+  background-color: #1cbb96;
+}
+
+.game-page__restart-button img:hover {
+  background-color: #0196f5;
+}
+
+/* -------------------GAME PAGE STYLING: PLAYING BOARD------------------ */
+
 .playing-board {
   width: 80vmin;
   height: 80vmin;
@@ -158,3 +221,7 @@ figcaption {
 .cell:hover {
   background-color: #d4c1dc;
 }
+
+/* .cell:nth.child(10) {
+  flex-grow: 1;
+} */
