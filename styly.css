@@ -237,5 +237,23 @@ figcaption {
 }
 
 .img-in-cell {
-  width: 65%;
+  animation-name: boom;
+  animation-duration: 0.4s;
+  width: 70%;
+}
+
+@keyframes boom {
+  0% {
+    width: 1%;
+  }
+  20% {
+    width: 95%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+.cell--taken {
+  pointer-events: none;
 }

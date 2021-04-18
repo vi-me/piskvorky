@@ -14,14 +14,16 @@ const makeATurn = (event) => {
     console.log('Dané pole je již obsazené.');
   } else if (whoseTurn === 'circle') {
     event.target.classList.add('cell--circle', 'cell--taken');
-    event.target.innerHTML = `<img class="img-in-cell"  src="images/circle.svg" alt="Cell taken by Player O"/>`;
-    console.log('Hráč "O" ukončil svůj tah. Na tahu je hráč "X"');
+    event.target.innerHTML = `<img class="img-in-cell"  src="images/circle.svg"  alt="Cell taken by Player O"/> `;
+    event.target.setAttribute('disabled', true);
 
+    console.log('Hráč "O" ukončil svůj tah. Na tahu je hráč "X"');
     whoseTurnIndicatorIcon.src = 'images/cross.svg';
     whoseTurn = 'cross';
   } else {
     event.target.classList.add('cell--cross', 'cell--taken');
-    event.target.innerHTML = `<img class="img-in-cell" src="images/cross.svg" alt="Cell taken by Player X"/>`;
+    event.target.innerHTML = `<img class="img-in-cell" src="images/cross.svg"  alt="Cell taken by Player X"/>`;
+    event.target.setAttribute('disabled', true);
     whoseTurn = 'circle';
     whoseTurnIndicatorIcon.src = 'images/circle.svg';
     console.log('Hráč "X" ukončil svůj tah. Na tahu je hráč "O"');
