@@ -1,22 +1,30 @@
 'use strict';
 
-let whoseTurn = 'circle';
-let cellsWithCircles = document.querySelector('.cell--circle');
-let cellsWithCrosses = document.querySelector('.cell--cross');
-
-let whoseTurnIndicatorIcon = document.querySelector('.game-page__player-icon');
+let whoseTurn = 'circle'; /*  = document.querySelector('.cell--cross'); */
+/* let cellsWithCircles = document.querySelector('.cell--circle');
+let cellsWithCrosses */ let whoseTurnIndicatorIcon = document.querySelector(
+  '.game-page__player-icon',
+);
 
 const makeATurn = (event) => {
-  if (whoseTurn === 'circle') {
-    event.target.classList.add('cell--circle');
+  if (
+    event.target.classList.contains('cell--taken') === true ||
+    event.target.classList.contains('img-in-cell')
+  ) {
+    console.log('Dané pole je již obsazené.');
+  } else if (whoseTurn === 'circle') {
+    event.target.classList.add('cell--circle', 'cell--taken');
     event.target.innerHTML = `<img class="img-in-cell"  src="images/circle.svg" alt="Cell taken by Player O"/>`;
+    console.log('Hráč "O" ukončil svůj tah. Na tahu je hráč "X"');
+
     whoseTurnIndicatorIcon.src = 'images/cross.svg';
     whoseTurn = 'cross';
   } else {
-    event.target.classList.add('cell--cross');
+    event.target.classList.add('cell--cross', 'cell--taken');
     event.target.innerHTML = `<img class="img-in-cell" src="images/cross.svg" alt="Cell taken by Player X"/>`;
     whoseTurn = 'circle';
     whoseTurnIndicatorIcon.src = 'images/circle.svg';
+    console.log('Hráč "X" ukončil svůj tah. Na tahu je hráč "O"');
   }
 };
 
