@@ -1,2 +1,9 @@
 'use strict';
-console.log('funguju');
+
+const whoseTurnIndicator = 'circle';
+
+const makeATurn = (event) => {
+  event.target.classList.add('cell--circle');
+};
+
+document.querySelector('.cell').addEventListener('click', makeATurn);
