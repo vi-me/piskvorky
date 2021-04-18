@@ -1,3 +1,5 @@
+/* -------------------------------------GENERAL STYLING------------------------------------- */
+
 body {
   background-image: linear-gradient(#615dad, #ffc8da);
   background-attachment: fixed;
@@ -7,7 +9,6 @@ body {
 main {
   color: #ffffff;
   text-align: center;
-  font-size: 1.1rem;
   line-height: 1.9rem;
   font-family: 'Arial', sans-serif;
 }
@@ -41,7 +42,7 @@ p {
   padding: 1rem;
 }
 
-/* -------------------BUTTON STYLES-------------------*/
+/* -------------------------------------BUTTONS (main-page & rules-page)-------------------------------------*/
 .container__buttons a {
   text-decoration: none;
   font-size: 1.2rem;
@@ -73,10 +74,12 @@ p {
   background-color: #0090e9;
 }
 
-/* -------------------RULES PAGE STYLING------------------- */
-.heading-rules {
+/* -------------------------------------RULES-PAGE------------------------------------- */
+.rules-page__heading-rules {
   padding-top: 80px;
 }
+
+/* ------list of rules (rules-page)------ */
 
 ol {
   margin: 0 3rem;
@@ -87,11 +90,13 @@ li {
   padding-bottom: 0.7rem;
 }
 
-.in-text-icon {
+.rules-page__in-text-icon {
   width: 1em;
   height: 1em;
   filter: invert(100%);
 }
+
+/* ------game situations (rules-page)------ */
 
 figure {
   padding: 0.7rem 0;
@@ -107,6 +112,8 @@ figcaption {
   width: 100%;
 }
 
+/* ------wider screens (rules-page)------ */
+
 @media (min-width: 640px) {
   html {
     min-width: 640px;
@@ -116,7 +123,7 @@ figcaption {
     width: 640px;
   }
 
-  .container__situations {
+  .rules-page__container__situations {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -134,13 +141,13 @@ figcaption {
   }
 }
 
-/* -------------------GAME PAGE STYLING------------------- */
+/* -------------------------------------GAME-PAGE------------------------------------- */
 .game-page__main {
   max-width: 80vmin;
   margin: auto;
 }
 
-/* ------GAME PAGE STYLING - HEADER ------- */
+/* ------HEADER in general (game-page)------ */
 
 .game-page__header {
   display: flex;
@@ -150,7 +157,7 @@ figcaption {
   align-items: center;
 }
 
-/* ---GAME PAGE STYLING - HEADER - left------- */
+/* ------HEADER-left (game-page)------ */
 
 .game-page__header-left {
   font-size: 1.3rem;
@@ -171,7 +178,7 @@ figcaption {
   height: 1.1em;
 }
 
-/* ---GAME PAGE STYLING - HEADER - right------- */
+/* ------HEADER-right (game-page)------ */
 
 .game-page__header-right a {
   text-decoration: none;
@@ -201,7 +208,7 @@ figcaption {
   background-color: #0196f5;
 }
 
-/* -------------------GAME PAGE STYLING: PLAYING BOARD------------------ */
+/* ------PLAYING BOARD (game-page)------ */
 
 .playing-board {
   width: 80vmin;
@@ -221,7 +228,3 @@ figcaption {
 .cell:hover {
   background-color: #d4c1dc;
 }
-
-/* .cell:nth.child(10) {
-  flex-grow: 1;
-} */
