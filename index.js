@@ -1,48 +1,42 @@
 'use strict';
 
-let whoseTurn = 'circle'; /*  = document.querySelector('.cell--cross'); */
-/* let cellsWithCircles = document.querySelector('.cell--circle');
-let cellsWithCrosses */ let whoseTurnIndicatorIcon = document.querySelector(
-  '.game-page__player-icon',
-);
+let whoseTurn = 'circle';
+let whoseTurnIndicatorIcon = document.querySelector('.game-page__player-icon');
 
 const cells = document.querySelectorAll('.cell');
 
 const makeATurn = (event) => {
-  /*   if (
-    event.target.classList.contains('cell--taken') === true ||
-    event.target.classList.contains('img-in-cell')
-  ) {
-    console.log('Dané pole je již obsazené.');
-  } else  */ if (
-    whoseTurn === 'circle'
-  ) {
+  if (whoseTurn === 'circle') {
     event.target.classList.add('cell--circle', 'cell--taken');
     event.target.innerHTML = `<img class="img-in-cell"  src="images/circle.svg"  alt="Cell taken by Player O"/> `;
-    console.log('obrazek O se změnil');
     event.target.setAttribute('disabled', true);
-
     whoseTurn = 'cross';
     whoseTurnIndicatorIcon.src = 'images/cross.svg';
 
-    if (isWinningMove(event.target) === true) {
+    if (isWinningMove(event.target)) {
       setTimeout(function () {
-        alert('Hra skončila a vyhrál hráč O!');
-      }, 500);
+        let r = confirm('Vyhrál hráč s kolečky. Spustit novou hru?');
+        if (r) {
+          location.reload();
+        }
+      }, 380);
     }
     console.log('Hráč "O" ukončil svůj tah. Na tahu je hráč "X"');
   } else {
     event.target.classList.add('cell--cross', 'cell--taken');
     event.target.innerHTML = `<img class="img-in-cell" src="images/cross.svg"  alt="Cell taken by Player X"/>`;
-    console.log('obrazek X se změnil');
     event.target.setAttribute('disabled', true);
 
     whoseTurn = 'circle';
     whoseTurnIndicatorIcon.src = 'images/circle.svg';
-    if (isWinningMove(event.target) === true) {
+
+    if (isWinningMove(event.target)) {
       setTimeout(function () {
-        alert('Hra skončila a vyhrál hráč X!');
-      }, 500);
+        let r = confirm('Vyhrál hráč s křížky. Spustit novou hru?');
+        if (r) {
+          location.reload();
+        }
+      }, 380);
     }
     console.log('Hráč "X" ukončil svůj tah. Na tahu je hráč "O"');
   }
