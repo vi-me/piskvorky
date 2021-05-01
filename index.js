@@ -9,9 +9,6 @@ let cellsWithCrosses */ let whoseTurnIndicatorIcon = document.querySelector(
 const cells = document.querySelectorAll('.cell');
 
 const makeATurn = (event) => {
-  if (isWinningMove(event.target) === true) {
-    alert('Hra skončila!');
-  }
   /*   if (
     event.target.classList.contains('cell--taken') === true ||
     event.target.classList.contains('img-in-cell')
@@ -22,18 +19,31 @@ const makeATurn = (event) => {
   ) {
     event.target.classList.add('cell--circle', 'cell--taken');
     event.target.innerHTML = `<img class="img-in-cell"  src="images/circle.svg"  alt="Cell taken by Player O"/> `;
+    console.log('obrazek O se změnil');
     event.target.setAttribute('disabled', true);
 
     whoseTurn = 'cross';
     whoseTurnIndicatorIcon.src = 'images/cross.svg';
+
+    if (isWinningMove(event.target) === true) {
+      setTimeout(function () {
+        alert('Hra skončila a vyhrál hráč O!');
+      }, 500);
+    }
     console.log('Hráč "O" ukončil svůj tah. Na tahu je hráč "X"');
   } else {
     event.target.classList.add('cell--cross', 'cell--taken');
     event.target.innerHTML = `<img class="img-in-cell" src="images/cross.svg"  alt="Cell taken by Player X"/>`;
+    console.log('obrazek X se změnil');
     event.target.setAttribute('disabled', true);
 
     whoseTurn = 'circle';
     whoseTurnIndicatorIcon.src = 'images/circle.svg';
+    if (isWinningMove(event.target) === true) {
+      setTimeout(function () {
+        alert('Hra skončila a vyhrál hráč X!');
+      }, 500);
+    }
     console.log('Hráč "X" ukončil svůj tah. Na tahu je hráč "O"');
   }
 };
