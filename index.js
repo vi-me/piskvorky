@@ -77,8 +77,13 @@ const isWinningMove = (cell) => {
   const symbol = getSymbol(cell);
 
   let i;
+  let j;
+
+  //////////VERTIKALY A HORIZONTALY
 
   let inRow = 1; // Jednička pro právě vybrané políčko
+  let inColumn = 1; // Jednička pro právě vybrané políčko
+
   // Koukni doleva
   i = origin.column;
   while (i > 0 && symbol === getSymbol(getCell(origin.row, i - 1))) {
@@ -100,7 +105,6 @@ const isWinningMove = (cell) => {
     return true;
   }
 
-  let inColumn = 1;
   // Koukni nahoru
   i = origin.row;
   while (i > 0 && symbol === getSymbol(getCell(i - 1, origin.column))) {
@@ -119,6 +123,67 @@ const isWinningMove = (cell) => {
   }
 
   if (inColumn >= symbolsToWin) {
+    return true;
+  }
+
+  //////////DIAGONALY
+
+  let inDiagonalLeft = 1; // Jednička pro právě vybrané políčko
+  let inDiagonalRight = 1; // Jednička pro právě vybrané políčko
+
+  // Koukni nahoru doleva
+  i = origin.row;
+  j = origin.column;
+  while (i > 0 && j > 0 && symbol === getSymbol(getCell(i - 1, j - 1))) {
+    inDiagonalLeft++;
+    i--;
+    j--;
+  }
+
+  // Koukni dolů doleva
+  i = origin.row;
+  j = origin.column;
+  while (
+    i < playingBoardSize - 1 &&
+    j > 0 &&
+    symbol === getSymbol(getCell(i + 1, j - 1))
+  ) {
+    inDiagonalLeft++;
+    i++;
+    j--;
+  }
+
+  if (inDiagonalLeft >= symbolsToWin) {
+    return true;
+  }
+
+  // Koukni nahoru doprava
+  i = origin.row;
+  j = origin.column;
+  while (
+    i > 0 &&
+    j < playingBoardSize - 1 &&
+    symbol === getSymbol(getCell(i - 1, j + 1))
+  ) {
+    inDiagonalRight++;
+    i--;
+    j++;
+  }
+
+  // Koukni dolů doprava
+  i = origin.row;
+  j = origin.column;
+  while (
+    i < playingBoardSize - 1 &&
+    j < playingBoardSize - 1 &&
+    symbol === getSymbol(getCell(i + 1, j + 1))
+  ) {
+    inDiagonalRight++;
+    i++;
+    j++;
+  }
+
+  if (inDiagonalRight >= symbolsToWin) {
     return true;
   }
 
