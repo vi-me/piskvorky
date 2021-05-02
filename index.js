@@ -21,7 +21,7 @@ const makeATurn = (event) => {
         if (r) {
           location.reload();
         }
-      }, 350);
+      }, 360);
     }
     console.log('Hráč "O" ukončil svůj tah. Na tahu je hráč "X"');
   } else {
@@ -39,7 +39,7 @@ const makeATurn = (event) => {
         if (r) {
           location.reload();
         }
-      }, 350);
+      }, 360);
     }
     console.log('Hráč "X" ukončil svůj tah. Na tahu je hráč "O"');
   }
